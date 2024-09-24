@@ -1,0 +1,18 @@
+using System;
+
+public class Pattern
+{
+    static void Pattern2(int N){
+        for(int i=0;i<N;i++){
+            for(int j=0;j<=i;j++){
+                Console.Write("* ");
+            }
+            Console.WriteLine();
+        }
+    }
+    public static void Main(string[] args)
+    {
+        int N = 6;
+        Pattern2(N);
+    }
+}
