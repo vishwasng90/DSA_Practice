@@ -1,0 +1,29 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int hr, min;
+        Console.WriteLine("Enter Hour");
+        hr=Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter Minute:");
+        min=Convert.ToInt32(Console.ReadLine());
+        
+        double hrDeg = (hr*30)+(min*30/60);
+        double minDeg = min*6;
+        
+        double dif = Math.Abs(hrDeg-minDeg);
+        if(dif>180)
+        dif=360-dif;
+        Console.WriteLine("Angle b/w both minute and hour is : {0}",dif);
+        Console.ReadLine();
+    }
+}
+
+//output
+Enter Hour
+10
+Enter Minute:
+00
+Angle b/w both minute and hour is : 60
