@@ -1,0 +1,46 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string str;
+        Console.WriteLine("Enter a String:");
+        str = Console.ReadLine();
+        
+        bool result = IsVowel(str);
+        if (result)
+            Console.WriteLine("Contains Vowel(s).");
+        else
+            Console.WriteLine("Does Not Contain Vowel.");
+        
+        Console.ReadLine();
+    }
+    
+    public static bool IsVowel(string str)
+    {
+        str = str.ToLower();
+        char[] characters = str.ToCharArray();
+        
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i] == 'a' || characters[i] == 'e' || characters[i] == 'i' || 
+                characters[i] == 'o' || characters[i] == 'u')
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+
+//output1
+Enter a String:
+vishwas
+Contains Vowel(s).
+
+//output2
+Enter a String:
+GGGG
+Does Not Contain Vowel.
