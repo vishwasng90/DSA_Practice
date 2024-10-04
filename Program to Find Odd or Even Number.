@@ -1,0 +1,28 @@
+using System;
+
+public class OddEven
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter any number:");
+        int number = int.Parse(Console.ReadLine()); 
+        if (number % 2 == 0)
+        {
+            Console.WriteLine(number + " is even.");
+        }
+        else
+        {
+            Console.WriteLine(number + " is odd.");
+        }
+    }
+}
+
+//output1
+Enter any number:
+9
+9 is odd.
+
+//output2
+Enter any number:
+6
+6 is even.
