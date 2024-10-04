@@ -1,0 +1,42 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter Any Number");
+        int number = int.Parse(Console.ReadLine());
+        int temp = number;
+        int sum = 0;
+        int digits = number.ToString().Length;
+        
+         while (temp != 0)
+        {
+            int remainder = temp % 10; // Extract last digit
+            sum += (int)Math.Pow(remainder, digits); // Add the power of the digit to the sum
+            temp /= 10; // Remove the last digit
+        }
+        
+        if (sum == number)
+        {
+            Console.WriteLine(number + " is an Armstrong number.");
+        }
+        else
+        {
+            Console.WriteLine(number + " is not an Armstrong number.");
+        }
+        
+    }
+}
+
+
+
+//output1
+Enter Any Number
+186
+186 is not an Armstrong number.
+
+//output2
+Enter Any Number
+153
+153 is an Armstrong number.
