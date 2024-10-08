@@ -1,0 +1,31 @@
+using System;
+
+public class SwapNumbers
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the first number:");
+        int a = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Enter the second number:");
+        int b = int.Parse(Console.ReadLine());
+
+        // Swap without using a third variable
+        a = a + b;
+        b = a - b;  // b is now the original a
+        a = a - b;  // a is now the original b
+
+        Console.WriteLine("After swapping: ");
+        Console.WriteLine("First number: " + a);
+        Console.WriteLine("Second number: " + b);
+    }
+}
+
+//Output
+Enter the first number:
+6
+Enter the second number:
+8
+After swapping: 
+First number: 8
+Second number: 6
