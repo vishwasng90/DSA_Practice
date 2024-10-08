@@ -1,0 +1,31 @@
+using System;
+
+public class FactorialProgram
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a number to find its factorial:");
+        int number = int.Parse(Console.ReadLine());
+        
+        long factorial = 1;
+
+        if (number < 0)
+        {
+            Console.WriteLine("Factorial is not defined for negative numbers.");
+        }
+        else
+        {
+            for (int i = 1; i <= number; i++)
+            {
+                factorial *= i;  // Multiply factorial with each number from 1 to the input number
+            }
+
+            Console.WriteLine("The factorial of " + number + " is: " + factorial);
+        }
+    }
+}
+
+//output
+Enter a number to find its factorial:
+6
+The factorial of 6 is: 720
