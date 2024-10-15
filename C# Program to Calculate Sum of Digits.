@@ -1,0 +1,25 @@
+using System;
+
+public class SumOfDigits
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a number:");
+        int number = int.Parse(Console.ReadLine());
+        int sum = 0;
+        int temp = Math.Abs(number); // Use absolute value to handle negative numbers
+
+        while (temp != 0)
+        {
+            int digit = temp % 10; // Extract the last digit
+            sum += digit;          // Add the digit to the sum
+            temp /= 10;            // Remove the last digit
+        }
+
+        Console.WriteLine("The sum of digits of " + number + " is: " + sum);
+    }
+}
+//output
+Enter a number:
+6767
+The sum of digits of 6767 is: 26
