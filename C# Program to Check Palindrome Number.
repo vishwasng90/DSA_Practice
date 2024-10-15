@@ -1,0 +1,38 @@
+using System;
+
+public class PalindromeNumber
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a number:");
+        int number = int.Parse(Console.ReadLine());
+        int temp = number;  // Store the original number
+        int reverse = 0;
+        
+        while (temp != 0)
+        {
+            int remainder = temp % 10;  // Get the last digit
+            reverse = reverse * 10 + remainder;  // Build the reversed number
+            temp /= 10;  // Remove the last digit
+        }
+
+        if (number == reverse)
+        {
+            Console.WriteLine(number + " is a palindrome.");
+        }
+        else
+        {
+            Console.WriteLine(number + " is not a palindrome.");
+        }
+    }
+}
+
+//output1
+Enter a number:
+123
+123 is not a palindrome.
+
+//output2
+Enter a number:
+121
+121 is a palindrome.
