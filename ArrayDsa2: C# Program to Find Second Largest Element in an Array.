@@ -1,0 +1,46 @@
+using System;
+
+public class SecondLargestElement
+{
+    public static void Main(string[] args)
+    {
+        // Example array
+        int[] array = {10, 20, 5, 40, 30};
+
+        // Check if array has at least two elements
+        if (array.Length < 2)
+        {
+            Console.WriteLine("Array must have at least two elements.");
+            return;
+        }
+
+        int largest = int.MinValue;
+        int secondLargest = int.MinValue;
+
+        // Traverse the array to find the largest and second largest elements
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] > largest)
+            {
+                secondLargest = largest;  // Update second largest
+                largest = array[i];       // Update largest
+            }
+            else if (array[i] > secondLargest && array[i] != largest)
+            {
+                secondLargest = array[i]; // Update second largest if element is unique
+            }
+        }
+
+        // If second largest is still int.MinValue, it means there's no second largest
+        if (secondLargest == int.MinValue)
+        {
+            Console.WriteLine("There is no second largest element in the array.");
+        }
+        else
+        {
+            Console.WriteLine("The second largest element is: " + secondLargest);
+        }
+    }
+}
+//output
+The second largest element is: 40
