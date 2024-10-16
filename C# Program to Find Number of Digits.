@@ -1,0 +1,33 @@
+using System;
+
+public class NumberOfDigits
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a number:");
+        int number = int.Parse(Console.ReadLine());
+
+        // Take absolute value to handle negative numbers
+        int temp = Math.Abs(number);  
+        int digits = 0;
+
+        if (temp == 0)
+        {
+            digits = 1; // Special case: 0 has 1 digit
+        }
+        else
+        {
+            while (temp != 0)
+            {
+                temp /= 10;  // Remove the last digit
+                digits++;    // Increment digit count
+            }
+        }
+
+        Console.WriteLine("The number of digits in " + number + " is: " + digits);
+    }
+}
+//output
+Enter a number:
+299
+The number of digits in 299 is: 3
