@@ -1,0 +1,33 @@
+using System;
+
+public class MinimumElement
+{
+    public static void Main(string[] args)
+    {
+        // Example array
+        int[] array = {10, 20, 5, 40, 30};
+
+        // Check if array is not empty
+        if (array.Length == 0)
+        {
+            Console.WriteLine("Array is empty.");
+            return;
+        }
+
+        // Initialize min with the first element
+        int min = array[0];
+
+        // Traverse the array to find the minimum element
+        for (int i = 1; i < array.Length; i++)
+        {
+            if (array[i] < min)
+            {
+                min = array[i];  // Update min if a smaller element is found
+            }
+        }
+
+        Console.WriteLine("The minimum element in the array is: " + min);
+    }
+}
+//output
+The minimum element in the array is: 5
