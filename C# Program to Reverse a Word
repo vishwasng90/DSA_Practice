@@ -1,0 +1,21 @@
+using System;
+
+public class ReverseWord
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a word:");
+        string word = Console.ReadLine();
+
+        // Convert the word into a character array, reverse it, and convert back to a string
+        char[] charArray = word.ToCharArray();
+        Array.Reverse(charArray);
+        string reversedWord = new string(charArray);
+
+        Console.WriteLine("Reversed word: " + reversedWord);
+    }
+}
+//output
+Enter a word:
+Vishwas
+Reversed word: sawhsiV
